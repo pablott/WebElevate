@@ -1,0 +1,2 @@
+CREATE TABLE correct_guesses (user_id int(3), answer int(3), guessed_on (date));
+INSERT INTO `correct_guesses`(`user_id`, `answer`, `guessed_on`) VALUES ('2','3','2017-11-07');

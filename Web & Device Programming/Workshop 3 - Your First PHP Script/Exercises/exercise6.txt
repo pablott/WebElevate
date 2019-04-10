@@ -1,0 +1,8 @@
+<?php
+$firstValue = 9;
+$secondValue = 91;
+
+$sum = $firstValue + $secondValue;
+print("The sum of " . $firstValue . " and " . $secondValue . " is " . $sum);
+ ?>
+

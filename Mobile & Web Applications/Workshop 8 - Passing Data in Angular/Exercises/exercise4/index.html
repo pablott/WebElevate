@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" ng-app="myApp" data-ng-controller="MainController">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workshop 8 - Passing Data in Angular</title>
+</head>
+
+<body>
+<a href="#!/faq">FAQ</a>
+<a href="" ng-click="setRoute('faq')">FAQ</a>
+
+<div id="container">
+  <div ng-view></div>
+</div>
+
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/myModule.js"></script>
+</body>
+</html>

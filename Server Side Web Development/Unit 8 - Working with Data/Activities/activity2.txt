@@ -1,0 +1,6 @@
+SELECT people.name FROM people WHERE people.styleId = 4
+
+# Not working:
+#SELECT people.name, hairstyles.name FROM people, hairstyles WHERE people.styleId = (hairstyles.name='Dreadlocks').id
+#SELECT hairstyle.id, hairstyle.name, people.name, COUNT(people.styleId=hairstyle.id) FROM hairstyle, people HAVING COUNT(people.styleId=hairstyle.id) > 2
+SELECT hairstyle.id, hairstyle.name, people.name FROM hairstyle, people WHERE people.styleId=hairstyle.id

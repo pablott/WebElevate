@@ -1,0 +1,3 @@
+# Ampps servers files from www/, instead of htdocs/
+# Needs permissions set to run
+sudo chmod -R 755 www/CI/

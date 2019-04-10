@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #AAAAAA;
+}
+
+p {
+    color: antiquewhite;
+    font-size: 16px;
+}
+
+p.feature {
+    color: aqua;
+    font-size: 20px;
+}

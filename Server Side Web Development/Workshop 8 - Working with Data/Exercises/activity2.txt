@@ -1,0 +1,6 @@
+# 1. Any hairstyle that belongs to more than one person. Hint: COUNT(something)
+SELECT `id`, `name`, `styleId`, COUNT(styleId) FROM `people` WHERE `styleId`
+
+# 2. Any hairstyle beginning with the letter B
+# Hint: use WHERE and combine it with the LIKE keyword. The % symbol is the wildcard in MySQL;
+SELECT hairstyle.name FROM hairstyle WHERE hairstyle.name LIKE 'B%'

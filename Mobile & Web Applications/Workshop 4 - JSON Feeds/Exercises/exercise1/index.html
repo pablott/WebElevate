@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery.getJSON Flickr</title>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+
+    <div>
+        <p>Write a search term and hit "Search" button:</p>
+        <input id="tags" type="text">
+        <input id="search" value="Search!" type="button">
+    </div>
+    <div id="images">
+
+    </div>
+
+    <script>
+        function imgQuery() {
+            // Get tags from text field
+            var tags = document.getElementById("tags").value;
+            console.log("You have searched for: " + tags);
+
+            var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+            $.getJSON( flickerAPI, {
+                tags: tags,
+                tagmode: "any",
+                format: "json"
+            })
+                .done(function( data ) {
+                    console.log(data);
+                    $.each( data.items, function( i, item ) {
+                        $( "<img>" ).attr({ "src": item.media.m, "title": item.title }).appendTo( "#images" );
+                        if ( i === 3 ) {
+                            return false;
+                        }
+                    });
+                });
+        };
+
+        var myButton = document.getElementById("search");
+        myButton.addEventListener("click", function(event){
+            imgQuery();
+            },false);
+
+    </script>
+
+</body>
+</html>

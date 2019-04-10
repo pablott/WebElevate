@@ -1,0 +1,13 @@
+@media all and (max-width:600px) {
+    #left-panel {
+        float: left;
+        /*width: 45%;*/
+    }
+
+    #content {
+        float:right;
+        /*width:45%;*/
+        margin-top:25px;
+        background-color: green;
+    }
+}

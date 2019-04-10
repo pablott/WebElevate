@@ -1,0 +1,12 @@
+# Create table
+CREATE TABLE `U7`.`users` ( `id` INT(2) , `name` VARCHAR(20) );
+# Add PK
+ALTER TABLE `users` ADD PRIMARY KEY(`id`);
+# Add AI
+ALTER TABLE `users` CHANGE `id` `id` INT(2) NULL DEFAULT NULL AUTO_INCREMENT;
+
+# Insert values
+INSERT INTO `U7`.`users` (`name`) VALUES ('Homer');
+
+# Works if PK is unused, fails if used
+INSERT INTO `U7`.`users` (`id` , `name`) VALUES (2,'Homer')

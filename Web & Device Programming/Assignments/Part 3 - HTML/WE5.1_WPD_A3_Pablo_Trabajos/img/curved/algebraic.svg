@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="200"
+   height="200"
+   viewBox="-80 -80 66.666667 66.666667"
+   id="svg54"
+   sodipodi:docname="algebraic.svg"
+   inkscape:version="0.92.1 r">
+  <metadata
+     id="metadata58">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Tschirnhausen cubic</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
+     id="namedview56"
+     showgrid="false"
+     inkscape:zoom="1.3906433"
+     inkscape:cx="114.49552"
+     inkscape:cy="95.83271"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg54" />
+  <title
+     id="title2">Tschirnhausen cubic</title>
+  <desc
+     id="desc4">y^2 = x^3 + 3 * x^2</desc>
+  <defs
+     id="defs9">
+    <pattern
+       id="grid"
+       width="20"
+       height="20"
+       patternUnits="userSpaceOnUse">
+      <path
+         d="M0,0h20v20"
+         fill="none"
+         stroke="black"
+         stroke-width=".5"
+         stroke-dasharray="1,2"
+         id="path6" />
+    </pattern>
+  </defs>
+  <g
+     id="g5271"
+     style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.18372097;stroke:#0081cd;stroke-width:2.69349313;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+     transform="matrix(0.37049062,0,0,0.37204126,-119.18724,-44.901046)">
+    <path
+       id="neg"
+       d="m 146.77966,-4.7457627 q 1.2,18.7999997 2.4,19.8999997 1.2,4.4 2.4,7.1 1.2,2.7 2.4,4.6 1.2,1.9 2.4,3.3 1.2,1.3 2.4,2.2 1.1,1 2.3,1.6 1.2,0.6 2.4,0.9 1.2,0.3 2.4,0.4 1.2,0.1 2.4,-0.1 1.2,-0.1 2.4,-0.4 1.2,-0.4 2.4,-0.9 1.2,-0.4 2.4,-1.1 1.2,-0.6 2.4,-1.4 1.2,-0.8 2.4,-1.8 1.2,-0.9 2.4,-2 1.1,-1 2.3,-2.2 1.2,-1.2 2.4,-2.5 1.2,-1.3 2.4,-2.7 1.2,-1.4 2.4,-2.9 1.2,-1.5 2.4,-3.1 1.2,-1.7 2.4,-3.4 1.2,-1.6999997 2.4,-3.4999997 1.2,-1.8 2.4,-3.7 1.2,-1.9 2.4,-3.8 1.2,-2 2.4,-4.1 1.2,0.8 2.3,3.4 1.2,2.1 2.4,4.4 1.2,2.2 2.4,4.5 1.2,2.2999997 2.4,4.5999997 1.2,2.4 2.4,4.9 1.2,2.4 2.4,4.9 1.2,2.6 2.4,5.1 1.2,2.6 2.4,5.3 1.2,2.6 2.4,5.4 1.2,2.7 2.4,5.5 1.2,2.8 2.3,5.6 1.2,2.9 2.4,5.8 1.2,2.9 2.4,5.9 1.2,3 2.4,6 1.2,3.1 2.4,6.2 1.2,3.1 2.4,6.2"
+       inkscape:connector-curvature="0"
+       style="vector-effect:none;fill:none;fill-opacity:0.18372097;stroke:#0081cd;stroke-width:2.69349313;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none" />
+    <use
+       xlink:href="#neg"
+       transform="matrix(1,0,0,-1,0,-9.4915254)"
+       id="use16"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       style="vector-effect:none;fill:none;fill-opacity:0.18372097;stroke:#0081cd;stroke-width:2.69349313;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none" />
+  </g>
+</svg>

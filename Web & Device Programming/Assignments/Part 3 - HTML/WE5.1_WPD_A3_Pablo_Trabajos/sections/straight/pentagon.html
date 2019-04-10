@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Geometric shapes - Pentagons</title>
+
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- jQueryUI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--<link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">-->
+
+    <!-- Custom styles -->
+    <link href="../../css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container"> 
+        <!-- Fixed navbar -->
+        <div class="masthead">
+            <h3 class="">Geometric shapes</h3>
+            <nav>
+                <ul class="nav nav-justified">
+                    <li class="active"><a href="../../index.html">Straight lines</a></li>
+                    <li><a href="../../index-curved.html">Curved lines</a></li>
+                </ul>
+            </nav>
+        </div> <!-- Navbar -->
+
+        <br>        
+        <!-- Tabbed content -->
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Regular pentagon</a></li>
+                <li><a href="#tabs-2">Equilateral pentagon</a></li>
+                <li><a href="#tabs-3">Cyclic pentagons</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>A <strong>regular pentagon</strong> has Schläfli symbol {5} and interior angles are 108°.</p>
+                <p>A regular pentagon has five lines of reflectional symmetry, and rotational symmetry of order 5 (through 72°, 144°, 216° and 288°). The diagonals of a convex regular pentagon are in the golden ratio to its sides.</p>
+            </div>
+            <div id="tabs-2">
+                <p>In geometry an <strong>equilateral pentagon</strong> is a polygon with five sides of equal length. Its five internal angles, in turn, can take a range of sets of values, thus permitting it to form a family of pentagons. The requirement is that all angles must add up to 540 degrees and must be between 0 and 360 degrees but not equal to 180 degrees. In contrast, the regular pentagon is unique, because it is equilateral and moreover it is equiangular (its five angles are equal; the measure is 108 degrees).</p>
+                <p>Four intersecting equal circles arranged in a closed chain are sufficient to determine a convex equilateral pentagon. Each circle's center is one of four vertices of the pentagon. The remaining vertex is determined by one of the intersection points of the first and the last circle of the chain.</p>
+                <p>It is possible to describe any convex equilateral pentagon with only two angles α and β with α ≥ β provided the fourth angle (δ) is the smallest of the rest of the angles. Thus the general equilateral pentagon can be regarded as a bivariate function f(α, β) where the rest of the angles can be obtained by using trigonometric relations. The equilateral pentagon described in this manner will be unique up to a rotation in the plane.</p>
+            </div>
+            <div id="tabs-3">
+                <p>A <strong>cyclic pentagon</strong> is one for which a circle called the circumcircle goes through all five vertices. The regular pentagon is an example of a cyclic pentagon. The area of a cyclic pentagon, whether regular or not, can be expressed as one fourth the square root of one of the roots of a septic equation whose coefficients are functions of the sides of the pentagon.</p>
+                <p>There exist cyclic pentagons with rational sides and rational area; these are called Robbins pentagons. In a Robbins pentagon, either all diagonals are rational or all are irrational, and it is conjectured that all the diagonals must be rational.</p>
+            </div>
+        </div> <!-- Tabbed content -->
+        
+        <br>
+        <footer class="footer">&copy; Pablo Trabajos</footer>
+    </div> <!-- container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- jQueryUI (necessary for accordion and tabs) -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../js/bootstrap.min.js"></script>
+    
+    <!-- Custom scripts -->
+    <script>
+        $( function() {
+            var $tabs = $( "#tabs" ).tabs();
+            $tabs.tabs({
+                hide: { effect: "fade", duration: 500 },
+                heightStyle: "auto"
+            });
+        } );
+    </script>
+</body>
+</html>

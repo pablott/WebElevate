@@ -1,0 +1,23 @@
+Exercise 2
+Write a Farenheit <-> Celsius converter in pseudocode
+
+prompt "What's the unit of the first temperature? C for Celsius, F for Farenheit.";
+store 'choice';
+prompt "Input temperature:";
+store 'value';
+if (choice==C)
+{
+	// Converting from Celsius
+	result=value*(9/5)+32;
+	print(result);
+} else if (choice==F)
+{
+	// Converting from Farenheit
+	result=(value-32)+(5/9);
+	print(result);
+} else
+{
+	// Error handling
+	prompt "Incorrect choice.";
+}
+end

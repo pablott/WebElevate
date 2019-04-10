@@ -1,0 +1,8 @@
+<?php
+$firstValue = 9;
+$secondValue = 91;
+
+$area = $firstValue * $secondValue;
+print("The area of a square " . $firstValue . "cm high and " . $secondValue . "cm wide is " . $area . "cm2");
+ ?>
+

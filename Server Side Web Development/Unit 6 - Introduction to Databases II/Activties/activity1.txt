@@ -1,0 +1,1 @@
+CREATE TABLE score_history (score int(3), scored_on datetime);

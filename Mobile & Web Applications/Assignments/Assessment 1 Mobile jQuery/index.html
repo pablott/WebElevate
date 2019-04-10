@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Walk Dublin Wayfinding Data</title>
+    <!-- I have used the local resource files because I was having intermittent connection problems.
+         Realistically, it should be fetched from a CDN.
+     -->
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/theme/assignment1.min.css" />
+    <link rel="stylesheet" href="css/theme/jquery.mobile.icons.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+
+    <!-- Main page -->
+    <div data-role="page" id="main" class="ui-responsive-panel">
+        <div data-role="header">
+            <a data-icon="bars" href="#left-panel">See instructions</a>
+            <h2>Walk Dublin Wayfinding Data</h2>
+        </div>
+        <div class="ui-content" role="main">
+            <h2>Walk Dublin Wayfinding Data</h2>
+            <p>You can use the filter below and click on one of the results for displaying details. <small class="address"></small></p>
+            <!-- Dynamic list form JSON -->
+            <div data-demo-html="true">
+                <ul id="poiList" data-role="listview" data-autodividers="true" data-filter="true" data-filter-placeholder="Locations..." data-filter-reveal="true">
+                </ul>
+            </div>
+        </div>
+
+        <!-- Side panel -->
+        <div class="panel left" data-role="panel" data-display="push" id="left-panel">
+            <h2>Instructions</h2>
+            <p>Use the text field to filter the results in the list. Clicking in a result will forward you to a page with details of each point of interest.</p>
+            <p>The data displayed belongs to the <a href="https://data.gov.ie/dataset/walk-dublin-wayfinding-data">Walk Dublink wayfinding</a> app.</p>
+            <p><small>Published by Dublin City Council.</small></p>
+            <p><small>Licensed under Creative Commons Attribution&nbsp;4.0</small></p>
+            <p><small>Authored by Pablo Trabajos.</small></p>
+        </div>
+
+        <div data-role="footer">
+            <h1>Data refreshed on <span id="time"></span></h1>
+        </div>
+    </div>
+
+
+    <!-- Details page -->
+    <div data-role="page" id="details">
+        <div data-role="header">
+            <a href="#" data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-left ui-corner-all">Back</a>
+            <h2></h2>
+        </div>
+        <div class="ui-content" role="main">
+            <h2></h2>
+            <h4></h4>
+            <p id="desc"></p>
+            <p id="map"></p>
+        </div>
+    </div>
+
+</body>
+
+
+<!-- As a best practice we load CSS at the top and jQuery at the bottom of the page after everything has been rendered.
+     After that, the custom JS that depends on jQuery functions is loaded.
+-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/fetchData.js"></script>
+
+</html>

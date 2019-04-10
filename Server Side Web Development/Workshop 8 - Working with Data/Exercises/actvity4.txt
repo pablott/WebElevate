@@ -1,0 +1,17 @@
+SELECT
+	hairstyle.id,
+	hairstyle.name,
+	people.name,
+	gender.personId,
+	genderTypes.gender
+FROM
+	hairstyle,
+	people,
+	gender,
+	genderTypes
+WHERE
+	people.styleId = hairstyle.id
+	AND gender.personId = people.id
+	AND genderTypes.genderId = gender.gender
+	AND genderTypes.gender = 'F'
+	AND people.name LIKE "B%"

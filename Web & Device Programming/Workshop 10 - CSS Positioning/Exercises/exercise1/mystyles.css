@@ -1,0 +1,16 @@
+#navigation {
+    position: absolute;
+    width: 180px;
+    height: 500px;
+    margin: 20px;
+    margin-top: 50px;
+    border-right: 1px solid #C6EC8C;
+    font-weight: normal;
+}
+
+#contentArea {
+    position: absolute;
+    padding: 0 0 20px 0;
+    margin-top: 50px;
+    margin-left: 195px;
+}

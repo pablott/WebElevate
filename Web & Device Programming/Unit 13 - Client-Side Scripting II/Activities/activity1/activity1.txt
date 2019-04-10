@@ -1,0 +1,10 @@
+Activity 1
+Hex Colours
+Humans are actually fairly bad at recognising colours.
+
+Use this tool to pick a "Royal Blue" colour and then compare the hex code with your neighbour; how close are you?
+
+http://www.colorpicker.com/
+
+Royal color: #46A4E8
+

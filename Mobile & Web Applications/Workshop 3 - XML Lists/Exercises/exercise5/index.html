@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Exercise 3</title>
+
+    <link rel="stylesheet" href="jquery-mobile-theme-141746-0/themes/exercise2.min.css" />
+    <link rel="stylesheet" href="jquery-mobile-theme-141746-0/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+
+    <script type="text/javascript">
+        console.log('starting...');
+
+        var xml;
+        $(document).ready(function(){
+            $.ajax({
+                type: "GET",
+                url: "../lolcatz.xml",
+                dataType: "xml",
+                success: xmlParser
+            });
+        });
+
+        function xmlParser(data){
+            xml = data;
+
+            $(xml).find("kitteh").each(function(){
+                kitteh = $(this);
+                var id = $(kitteh).find("id").text();
+                var name = $(kitteh).find("name").text();
+                var src = $(kitteh).find("url").text();
+
+                console.log(name);
+                // Create list
+                $("#myList").append('<li><a href=\"#' + id + '\">' + name + '</a></li>').listview('refresh');
+
+                // Create pages
+                $("#myPages").append(
+                    '<div id=\"' + id + '\" data-role=\"page\">' +
+                        '<div data-role=\"header\"><h1>' + name + '</h1></div>' +
+                            '<div class=\"content-primary\">' +
+                                '<img src=\"' + src + '\">' +
+                            '</div>' +
+                    '</div>'
+                );
+            });
+        }
+    </script>
+  </head>
+
+  <body>
+    <div id="myPages">
+        <div id="list" data-role="page">
+            <div data-role="header">
+                <h1>XML list</h1>
+            </div>
+            <div data-role="content">
+                <p>Lolcatz retriever</p>
+            </div>
+            <div class="content-primary">
+                <div data-demo-html="true">
+                    <ul id="myList" data-role="listview" data-filter="true" data-filter-placeholder="Search for a cat..." data-filter-reveal="true">
+                    </ul>
+                </div>
+            </div>
+            <div data-role="footer">
+                <h1>Footer</h1>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
+
+

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workshop 7, Exercise 1 - TODO app</title>
+</head>
+
+<body>
+  <div class="container" data-ng-app="myTaskList" data-ng-controller="myTaskController">
+    <!-- Input form -->
+    <p>New task:</p>
+    Name: <input type="text" ng-model="newTask.name"> {{newTask.name}}
+    <br/>
+    Description: <input type="text" ng-model="newTask.desc"> {{newTask.desc}}
+    <br/>
+    <button ng-click="addTask()">Add task</button>
+
+
+    <!-- Binding model and view -->
+    <ul>
+      <li data-ng-repeat="item in todo">
+        {{item.name}}, {{item.desc}} ({{$index}})
+        <button ng-click="duplicateTask($index)">Duplicate</button>
+        <button ng-click="deleteTask($index)">X</button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="js/angular.min.js"></script>
+  <script src="js/controller.js"></script>
+
+</body>
+</html>

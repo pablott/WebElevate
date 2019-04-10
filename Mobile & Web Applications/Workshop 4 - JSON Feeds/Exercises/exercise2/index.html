@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery.getJSON Flickr with lightbox</title>
+    <link rel="stylesheet" href="jquery-mobile-theme-141746-0/themes/exercise2.min.css" />
+    <link rel="stylesheet" href="jquery-mobile-theme-141746-0/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+  <div>
+      <p>Write a search term and hit "Search" button:</p>
+      <input id="tags" type="text">
+      <input id="search" value="Search!" type="button">
+  </div>
+
+  <div id="images">
+      <a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Basic Popup</a>
+      <br>
+  </div>
+
+  <div id="popups" >
+      <div data-role="popup" id="popupBasic">
+          <p>This is a completely basic popup, no options set.</p>
+      </div>
+  </div>
+
+  <script>
+      function imgQuery() {
+          // Get tags from text field
+          var tags = document.getElementById("tags").value;
+          console.log("You have searched for: " + tags);
+
+          // Get JSON reslts
+          var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+          $.getJSON( flickerAPI, {
+              tags: tags,
+              tagmode: "any",
+              format: "json"
+          })
+              .done(function( data ) {
+                  console.log(data);
+                  $.each( data.items, function( i, item ) {
+                      // Add the images to #images div:
+                      $( "<a>" ).attr({ "href": "#popup" + i, "data-rel": "popup", "class": "myBtn" }).html(item.title).appendTo( "#images" );
+                      $("<div>").attr("data-role", "popup").attr("id", "popup" + i).html("<img src=" + item.media.m +">").appendTo("#popups").popup();
+
+
+                      if ( i === 2 ) {
+                          return false;
+                      }
+                  });
+
+
+                  /* This is my first attempt and introducing the popups in the DOM which does not work, using popup() is the way
+                   $('.myBtn').on('click', function(event) {
+                      console.log('link clicked');
+
+                      let target = $(event.target);
+                      photo_id = target.attr('href').replace('#','');
+                      console.log(photo_id);
+
+                      //$( "<a>" ).attr({ "href": photo_id, "data-rel": "popup" });//.html(item.title).appendTo( "#photo" );
+
+                      subpage = $('<div/>', {"data-role": "page", "id": photo_id, "data-role-busstop_page": '1'});
+                      subpage.appendTo("#popups");
+
+                      //$( "<img>" ).attr({ "href": items[0].media.m}).appendTo( "#photo" );
+                  });
+  */
+              });
+      };
+
+      var myButton = document.getElementById("search");
+      myButton.addEventListener("click", function(event){
+        imgQuery();
+      },false);
+  </script>
+
+</body>
+</html>

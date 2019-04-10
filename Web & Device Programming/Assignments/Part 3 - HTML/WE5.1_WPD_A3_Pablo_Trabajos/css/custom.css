@@ -1,0 +1,220 @@
+/* Custom styles overriding bootstrap defaults
+ * and adding some other custom elements.
+ * Part is taken from bootstrap 'justified navigation' example
+ */
+
+/* Load font file from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+/*
+ * General styles 
+ */
+body, p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+}
+
+/* Make body take whole height */
+html, body {
+    overflow: auto;
+    height: 100%;
+}
+body {
+    color: white;
+    padding-top: 20px;
+    background-color: #26004d; /* Old browsers */
+    background-image:  url('../img/axiom-pattern.png'), -webkit-gradient(linear, left top, left bottom, from(#26004d), to(#5900b3));
+    background-image:  url('../img/axiom-pattern.png'), -webkit-linear-gradient(top, #26004d 0%, #5900b3 100%);
+    background-image:  url('../img/axiom-pattern.png'), -o-linear-gradient(top, #26004d 0%, #5900b3 100%);
+    background-image:  url('../img/axiom-pattern.png'), linear-gradient(to bottom, #26004d 0%,#5900b3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26004d', endColorstr='#5900b3',GradientType=0 ); /* IE6-9 */
+    background-repeat: repeat; /* Repeat the gradient */
+}
+strong {
+    color: deeppink;
+}
+.masthead > h3 {
+    color: rgba(100, 100, 231, .5);;
+    font-weight: bold;
+    font-size: 96px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 5px 5px 0px deeppink, -5px -5px 0px deeppink;
+}
+.well, #tabs {
+    border: 3px solid deeppink;
+    background: none;
+}
+
+/* Re-style footer */
+.footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    border-top: 1px solid deeppink;
+    clear: both;
+}
+
+/* Customize the nav-justified links to be fill the entire space of the .navbar */
+.nav-justified {
+    background-color: #eee;
+    border: 3px solid deeppink;
+    border-radius: 10px;
+}
+.nav-justified > li > a {
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: deeppink;
+    text-align: center;
+    background-color: #26004d; /* Old browsers */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#26004d), to(#5900b3));
+    background-image: -webkit-linear-gradient(top, #26004d 0%, #5900b3 100%);
+    background-image: -o-linear-gradient(top, #26004d 0%, #5900b3 100%);
+    background-image: linear-gradient(to bottom, #26004d 0%,#5900b3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26004d', endColorstr='#5900b3',GradientType=0 ); /* IE6-9 */
+    background-repeat: repeat-x; /* Repeat the gradient */
+}
+.nav-justified > li > a:hover,
+.nav-justified > li > a:focus {
+    background: none;
+    background-color: rgba(255, 204, 231, .3);
+}
+.nav-justified > .active > a {
+    background: none;
+    background-color: rgba(255, 204, 231, 1);
+}
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus {
+    background: none;
+    background-color: rgba(255, 204, 231, 1);
+}
+.nav-justified > li:first-child > a {
+    border-radius: 5px 5px 0 0;
+}
+.nav-justified > li:last-child > a {
+    border-bottom: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+
+
+/* 
+ * Accordion styling 
+ */
+#accordion > h3 {
+    font-weight: bold;
+    padding: 8px;
+    background-color: rgba(255, 20, 147, .2);
+    border: 1px solid deeppink;
+}
+
+/* 
+ * Carousel styling 
+ */
+/* Center images inside carousel items */
+.item > img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Remove shade from controls */
+.carousel-control.left,
+.carousel-control.right {
+    background: none;
+}
+
+
+
+/* 
+ * Buttons styling 
+ */
+.btn-primary {
+    font-weight: bold; 
+    background: none;
+    border: 2px solid deeppink;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: rgba(255, 20, 147, .5);    
+    border: 2px solid deeppink;
+}
+
+
+
+/* 
+ * Tabs styling 
+ */
+/* Tabs header */
+.ui-tabs-nav,
+.ui-widget-content .ui-state-default {
+    font-weight: bold;
+    background: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid deeppink;
+}
+.ui-state-default a:link {
+    color: white;
+}
+.ui-widget-content .ui-state-active {
+    background-color: deeppink;
+    border-radius: 10px;
+}
+.ui-state-active a:link {
+    color: #26004d;
+}
+
+/* Center tabs */
+/* https://stackoverflow.com/questions/10561841/how-to-center-align-jquery-ui-tabs-with-screenshot */
+.ui-tabs .ui-tabs-nav {
+    text-align: center;
+    padding-bottom: 5px; 
+}
+.ui-tabs .ui-tabs-nav li {
+    float: none !important;
+    display: inline-block;
+}
+
+/* Tabs content */
+.ui-tabs-panel {
+    color: white;
+}
+
+/* "Normal" screen */
+@media (min-width: 768px) {
+    .nav-justified {
+        max-height: 52px;
+    }
+    .nav-justified > li > a {
+        border-right: 1px solid deeppink;
+        border-left: 1px solid deeppink;
+    }
+    .nav-justified > li:first-child > a {
+        border-left: 0;
+        border-radius: 5px 0 0 5px;
+    }
+    .nav-justified > li:last-child > a {
+        border-right: 0;
+        border-radius: 0 5px 5px 0;
+    }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+        /* Remove the padding we set earlier */
+    .masthead,
+    .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/* Reduce text when nav is collapsed */
+@media (max-width: 768px) {
+    .masthead > h3 {
+        font-size: 56px;
+    }
+}

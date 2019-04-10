@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Side panel</title>
+
+    <link rel="stylesheet" href="jquery-mobile-theme-141746-0/themes/exercise2.min.css" />
+    <link rel="stylesheet" href="jquery-mobile-theme-141746-0/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="styles.cssd" />
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+
+    <div data-role="page" id="pageone" class="ui-responsive-panel">
+        <div data-role="header">
+            <a data-icon="bars" href="#left-panel">Open panel</a>
+            <h1>Panel</h1>
+        </div>
+
+        <div data-role="content">
+                <input id="search" value="Search!" type="button">
+
+                <p>This is a typical page that has two buttons in the header bar that open panels. The left panel has the push display mode, the right panel reveal. To make this responsive, you can make the page re-flow at wider widths. This allows both the panel menu and page to be used together when more space is available. This behavior is controlled by CSS media queries. You can create a custom one for a specific breakpoint or use the breakpoint preset by adding the class="ui-responsive-panel" to the page container. We have added this class on this demo page. Note that when using the preset class, we also hide the dismiss layer on wider screens if the panel has the push display mode.</p>
+
+
+        </div>
+
+
+        <div class="panel left" data-role="panel" data-display="push" id="left-panel">
+            <p>Panel content</p>
+        </div>
+
+        <div data-role="footer">
+            <h1>Footer</h1>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <script src="panel.js"></script>
+
+    <script>
+
+
+    </script>
+
+</body>
+</html>

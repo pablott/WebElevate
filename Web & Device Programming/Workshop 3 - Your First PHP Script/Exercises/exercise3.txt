@@ -1,0 +1,7 @@
+<?php
+$celsiusValue = 20;
+
+$farenheitValue = 20*(9/5)+32;
+print($celsiusValue . "Cº is " . $farenheitValue . "Fº.");
+ ?>
+

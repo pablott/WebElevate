@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #AAAAAA;
+}
+p {
+    font-weight: bold;
+}
+.differentText {
+    font-family:  Courier, monospace; color: #00AAFF;
+}
+#highlight {
+    border: solid red 5px;
+}
+.bigger {
+    font-size: 200%;
+}
+.bigger::first-letter {
+    color: red;
+}
+a:link {
+    color: blue;
+}
+a:visited {
+    color: darkblue;
+}
+a:hover {
+    color: aqua;
+}
+a:active {
+    color:crimson;
+}

@@ -1,0 +1,9 @@
+.next-tab{
+    background-color: red;
+    float: right;
+}
+
+.prev-tab{
+    background-color: red;
+    float: left;
+}

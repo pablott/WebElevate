@@ -1,0 +1,10 @@
+Activity 1
+http://php.net/manual/en/ref.array.php
+
+1. Function to add at start of an array.
+array_merge — Merge one or more arrays (depending on order)
+array_unshift — Prepend one or more elements to the beginning of an array
+
+2. Function to add at the end of an array.
+array_push — Push one or more elements onto the end of array
+array_merge — Merge one or more arrays (depending on order)

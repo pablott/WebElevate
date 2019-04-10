@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #AAAAAA;
+}
+
+canvas {
+    border: 1px solid black;
+}
+
+canvas#firstFrame {
+    
+}
+
+canvas#secondFrame {
+    position: relative;
+    top: 50px;
+    left: -50px;
+    
+}

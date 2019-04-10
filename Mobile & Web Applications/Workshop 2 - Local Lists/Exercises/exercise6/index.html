@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Exercise 6</title>
+
+    <link rel="stylesheet" href="jquery-mobile-theme-141746-0/themes/exercise2.min.css" />
+    <link rel="stylesheet" href="jquery-mobile-theme-141746-0/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="jquery/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+
+  <body>
+
+    <div data-role="page" id="aznar">
+        <div data-role="header">
+            <h1>This is page Aznar</h1>
+        </div>
+        <div data-role="content">
+            <p>Some text...</p>
+            <a href="#zapatero">Go to page Zapatero</a>
+        </div>
+        <div class="content-primary">
+            <div data-demo-html="true">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search for a president..." data-filter-reveal="false">
+                    <li><a href="#aznar" data-transition="pop">Aznar</a></li>
+                    <li><a href="#zapatero" data-transition="slide">Zapatero</a></li>
+                    <li><a href="#gonzalez" data-transition="fade">González</a></li>
+                    <li><a href="#suarez" data-transition="slidedown">Suárez</a></li>
+                    <li><a href="#rajoy" data-transition="turn">Rajoy</a></li>
+                </ul>
+            </div>
+        </div>        <div data-role="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="zapatero">
+        <div data-role="header">
+            <h1>This is page Zapatero</h1>
+        </div>
+        <div data-role="content">
+            <p>Some text...</p>
+            <a href="#gonzalez">Go to page González</a>
+        </div>
+        <div data-role="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>
+      
+    <div data-role="page" id="gonzalez">
+        <div data-role="header">
+            <h1>This is page González</h1>
+        </div>
+        <div data-role="content">
+            <p>Some text...</p>
+            <a href="#suarez">Go to page Suárez</a>
+        </div>
+        <div data-role="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>    
+      
+    <div data-role="page" id="suarez">
+        <div data-role="header">
+            <h1>This is page Suárez</h1>
+        </div>
+        <div data-role="content">
+            <p>Some text...</p>
+            <a href="#rajoy">Go to page Rajoy</a>
+        </div>
+        <div data-role="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>            
+      
+    <div data-role="page" id="rajoy">
+        <div data-role="header">
+            <h1>This is page Rajoy</h1>
+        </div>
+        <div data-role="content">
+            <p>Some text...</p>
+            <a href="#aznar">Go to page Aznar</a>
+        </div>
+        <div data-role="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>
+      
+  </body>
+</html>
+
+

@@ -1,0 +1,1 @@
+SELECT hairstyle.id, hairstyle.name, people.name, gender.personId FROM hairstyle, people, gender WHERE people.styleId=hairstyle.id AND (gender.personId=people.id) AND gender.gender='Female' AND people.name LIKE "B%"
