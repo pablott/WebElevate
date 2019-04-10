@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- The head is based on default hello-world Corodova template, Apache license -->
+<html>
+  <head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="author" content="Pablo Trabajos">
+    <meta name="description" content="A simple TODO list based on Angular.js for Assignment 2 of MWA course.">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>My TODO list</title>
+  </head>
+  <body>
+    <div class="container" data-ng-app="myTaskList" data-ng-controller="myTaskController">
+      <!-- Header -->
+      <h1><div id="logo"></div>My TODO list</h1>
+
+      <!-- Input form -->
+      <form name="taskForm" id="taskForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" ng-model="newTask.name" ng-init="newTask.name=''" required />
+        <br>
+        <label for="desc">Description:</label>
+        <input type="text" id="desc" ng-model="newTask.desc" ng-init="newTask.desc=''" required />
+        <br>
+        <label for="desc">Status:</label>
+        <select id="btn-prio" ng-model="newTask.prio" ng-init="newTask.prio='NORMAL'">
+          <option value="NORMAL">NORMAL</option>
+          <option value="URGENT">URGENT</option>
+          <option value="ON HOLD">ON HOLD</option>
+        </select>
+        <br>
+        <button class="btn" id="btn-add" ng-click="addTask()" ng-disabled="taskForm.$invalid"><strong>Add task</strong> {{newTask.name}} {{newTask.desc}}</button>
+      </form>
+
+      <!-- List items in todo list -->
+      <div id="list">
+        <ul>
+          <li class="item" data-ng-repeat="item in todo">
+            <input class="btn check" type="checkbox" ng-model="item.check">
+            <strong>{{item.name}}</strong>
+            <br>
+            <em>{{item.desc}} (Index: {{$index}})</em>
+            <br>
+            <em>Priority: {{item.prio}}</em>
+            <a class="btn btn-del" ng-click="deleteTask($index)">X</a>
+            <a class="btn btn-dup" ng-click="duplicateTask($index)">Duplicate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="phonegap.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+  </body>
+</html>

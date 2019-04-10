@@ -1,0 +1,136 @@
+/* The top body rules are based on default hello-world Corodova template, Apache license */
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+  background: rgb(232,12,122);
+/* PhoneGap does not seem to interpret gradients well...
+  background: -moz-linear-gradient(top, rgba(232,12,122,1) 0%, rgba(232,44,12,1) 51%);
+  background: -webkit-linear-gradient(top, rgba(232,12,122,1) 0%,rgba(232,44,12,1) 51%);
+  background: linear-gradient(to bottom, rgba(232,12,122,1) 0%,rgba(232,44,12,1) 51%);
+  background-attachment:fixed;*/
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  height: 100%;
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+/* Portrait layout (default) */
+.container {
+  width: 340px;
+  text-align: left;
+  padding: 0;
+  margin: 0 auto 0 auto;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+  .container {
+    background-position: left center;
+    padding: 0;
+  }
+}
+
+
+/* Header */
+#logo {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  margin-bottom: -8px;
+  background: url(../img/logo.png) no-repeat center top;
+  background-size: 48px 48px;
+}
+
+h1 {
+  color: rgba(0,0,255,.6);
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  overflow: visible;
+  padding: 0px;
+  text-align: center;
+}
+
+
+/* Buttons */
+.btn {
+  color: black;
+  border: 1px solid rgba(0,0,0,.5);
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0px 0px 4px blue;
+  line-height: 12px;
+}
+
+.btn:disabled {
+  color: darkgray;
+  background-color: gray;
+  pointer-events: none; /* disables interaction while form is empty */
+}
+
+#btn-add {
+  width: 100%;
+}
+
+.btn-dup, .btn-del {
+  float: right;
+  margin: -30px 0 0 10px;
+}
+
+.btn-add:active, .btn-dup:active {
+  background-color: green;
+}
+
+.btn-del:active {
+  background-color: orange;
+}
+
+.check {
+  float: left;
+  margin: 6px 10px 40px 0;
+}
+
+
+/* Input form */
+#taskForm {
+  margin: 0 auto 0 auto;
+}
+
+#taskForm label {
+  width: 25%;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+#taskForm input, #taskForm select {
+  width: 65%;
+  margin-bottom: 10px;
+}
+
+#taskForm input:focus {
+  background-color: rgba(200,200,255,.7);
+}
+
+
+/* Todo items */
+#list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item {
+  height: 75px;
+  line-height: 25px;
+  padding: 4px 10px 4px 10px;
+  margin: 0;
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  clear: both;
+}
